@@ -30,4 +30,4 @@ Unit tests are included to ensure the correctness of the machine translation, no
 ## Author Information
 
 - Name: Naresh Kumar Satish
-- Email: nareshkumar@gmail.com
+- Email: nareshkumar.satish30@gmail.com
