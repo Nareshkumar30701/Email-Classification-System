@@ -1,0 +1,49 @@
+# Project Information
+name: Email Classification Workflow
+description: A workflow for email classification using machine translation, noise removal, and model building.
+
+# Environment Specification
+environment:
+  name: text-classification
+  channels:
+    - defaults
+    - conda-forge
+  dependencies:
+    - python=3.8
+    - numpy=1.21.2
+    - pandas=1.3.3
+    - stanza=1.3.1
+    - transformers=4.12.0
+    - scikit-learn=0.24.2
+
+# Workflow Execution
+workflow:
+  steps:
+    - name: Load and Preprocess Data
+      description: Load data from CSV file and preprocess it.
+      command: python src.py
+
+# Unit Testing
+testing:
+  name: Unit Testing
+  description: Test components of machine translation, noise removal, and model building.
+  steps:
+    - name: Install Testing Dependencies
+      description: Install necessary packages for testing.
+      command: pip install pytest
+    - name: Run Tests
+      description: Execute unit tests.
+      command: pytest
+
+# Execution Instructions
+execution:
+  instructions: |
+    1. Clone the repository.
+    2. Install the dependencies using the provided environment specification.
+    3. Execute the workflow steps by running the specified commands.
+    4. Run unit tests to ensure the correctness of components.
+
+# Author Information
+author:
+  name: Naresh Kumar Satish
+  email: nareshkumar.satish30@gmail.com
